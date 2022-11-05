@@ -9,7 +9,7 @@ def sequence(v):
         yield u
         u = (v + u)/(1 + v*u/(C*C))
 
-for n, u in enumerate(sequence(v=1000)):
+for n, u in enumerate(sequence(v=100)):
     print(f"u({n}) = {u}")
-    if n >= 9:
+    if n >= 50:
         break
