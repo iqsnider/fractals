@@ -9,7 +9,12 @@ def sequence(v):
         yield u
         u = (v + u)/(1 + v*u/(C*C))
 
-for n, u in enumerate(sequence(v=100)):
-    print(f"u({n}) = {u}")
-    if n >= 50:
-        break
+
+def print_terms(x,y):
+    for n, u in enumerate(sequence(v=y)):
+        print(f"u({n}) = {u}")
+        if n >= x:
+            break
+
+if __name__ == "__main__":
+    print_terms(50,10)
